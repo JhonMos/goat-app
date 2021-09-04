@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProductsGrid } from './ProductsGrid'
+import { ProductsGrid } from './components/ProductsGrid'
 
 export const App = () => {
     return (

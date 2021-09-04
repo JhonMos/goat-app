@@ -19,7 +19,8 @@ const products = [
     "price": 35000,
     "color": "Negra",
     "image": happyFaceNegra,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
   },
   {
     "id": 2,
@@ -27,7 +28,9 @@ const products = [
     "price": 35000,
     "color": "Negra",
     "image": sexyPeachNegra,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
+
   },
   {
     "id": 3,
@@ -35,7 +38,8 @@ const products = [
     "price": 35000,
     "color": "Negra",
     "image": sourFlavorJuiceNegra,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true",
   },
   {
     "id": 4,
@@ -43,7 +47,8 @@ const products = [
     "price": 35000,
     "color": "Blanca",
     "image": idiotLoveBlanca,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
   },
   {
     "id": 5,
@@ -51,7 +56,8 @@ const products = [
     "price": 35000,
     "color": "Blanca",
     "image": moneyFirstBlanca,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
   },
   {
     "id": 6,
@@ -59,7 +65,8 @@ const products = [
     "price": 35000,
     "color": "Blanca",
     "image": goatBrandBlanca,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
   },
   {
     "id": 7,
@@ -67,7 +74,8 @@ const products = [
     "price": 35000,
     "color": "Cafe",
     "image": cactusJackMaskCafe,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
   },
   {
     "id": 8,
@@ -75,7 +83,8 @@ const products = [
     "price": 35000,
     "color": "Cafe",
     "image": sourFlavorJuiceCafe,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
   },
   {
     "id": 9,
@@ -83,7 +92,8 @@ const products = [
     "price": 35000,
     "color": "Roja",
     "image": rainOfVibesRoja,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
   },
   {
     "id": 10,
@@ -91,7 +101,8 @@ const products = [
     "price": 35000,
     "color": "Azul",
     "image": tvNoSignalAzul,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "true"
   },
   {
     "id": 11,
@@ -99,7 +110,8 @@ const products = [
     "price": 35000,
     "color": "Negra",
     "image": cityComptonAzul,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "false"
   },
   {
     "id": 12,
@@ -107,7 +119,8 @@ const products = [
     "price": 35000,
     "color": "Azul",
     "image": happyFaceAzul,
-    "brand": "Goat"
+    "brand": "Goat",
+    "category": "false"
   }
 ]
 
