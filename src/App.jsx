@@ -2,7 +2,7 @@ import React from "react";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 import { ProductsGrid } from "./components/ProductsGrid";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 export const App = () => {
   return (
