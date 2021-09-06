@@ -1,0 +1,52 @@
+.principal {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.header {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+}
+.menuList {
+  display: flex;
+}
+.menuItem {
+  padding: 14px;
+}
+
+@media (max-width: 1024px) {
+    .menu{
+        position: fixed;
+        top: 4rem;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+        transition: .5s;
+    }
+    .menuList {
+        flex-direction: column;
+    }
+    .menuItem {
+        margin: 25px;
+    }
+    .show{
+        left: 0;
+    }
+}
+@media (min-width: 1024px) {
+  .toogle {
+    display: none;
+  }
+}
