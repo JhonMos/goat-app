@@ -17,6 +17,7 @@ export const ProductsGrid = () => {
             GOAT
           </h3>
           <span className={styles.home__cap}>Gorras a la moda</span>
+          <p></p>
         </div>
         <div className={styles.home__img}>
           <img className={styles.imgCapGoat} src={capGoat} alt="" />
