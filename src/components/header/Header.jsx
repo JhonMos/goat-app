@@ -10,7 +10,7 @@ export const Header = () => {
   const toggleMenu = () =>{
     setMenu(!menu)
   }
-  console.log(menu)
+  
   const styleMenu = {
     left: menu ? 0 : "-100%"
   }
