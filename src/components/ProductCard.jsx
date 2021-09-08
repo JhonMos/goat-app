@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { DataContext } from "./DataProvider";
 import styles from "./ProductCard.module.css";
 
-export const ProductCard = ({ product }) => {
-  const [products, setProducts] = useContext(DataContext);
+export const ProductCard = () => {
+  const [products] = useContext(DataContext);
   console.log(products);
   return (
     <>
@@ -11,7 +12,9 @@ export const ProductCard = ({ product }) => {
         products.map((product) => (
           <div className={styles.card__product} key={product.id}>
             <div className={styles.card__img}>
-              <img src={product.image} alt={product.name} />
+              <Link to={`/products/${product.id}`}>
+                <img src={product.image} alt={product.name} />
+              </Link>
             </div>
             <div className={styles.card__description}>
               <span className={styles.card__brand}>{product.brand}</span>

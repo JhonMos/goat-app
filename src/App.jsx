@@ -4,6 +4,8 @@ import { Header } from "./components/header/Header";
 import { ProductsGrid } from "./components/ProductsGrid";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { DataProvider } from "./components/DataProvider";
+import { Details } from "./components/Details";
+
 
 export const App = () => {
   return (
@@ -16,6 +18,9 @@ export const App = () => {
           </Route>
           <Route path="/about">
             Acerca de
+          </Route>
+          <Route path="/products/:id">
+            <Details />
           </Route>
           <Route path="/">
             <ProductsGrid />
