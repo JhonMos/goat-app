@@ -18,10 +18,10 @@ export const Details = () => {
             style={{ backgroundImage: `url(${product.image})` }}
           />
           <div className={styles.boxDetails}>
-            <p>{product.brand}</p>
-            <h2>{product.name}</h2>
+            <p className={styles.brand}>{product.brand}</p>
+            <h2 className={styles.name}>{product.name}</h2>
             <div className={styles.prueba}>
-              <h3>COP {product.price}</h3>
+              <h3 className={styles.price}>COP {product.price}</h3>
               <div className={styles.counterContainer}>
                 <button className={styles.btnPlus}>-</button>
                 <span className={styles.quantity}>1</span>
@@ -29,7 +29,7 @@ export const Details = () => {
               </div>
             </div>
             <p className={styles.infoProduct}>Información del producto</p>
-            <ul>
+            <ul className={styles.description}>
               {product.description.map((description, index) => (
                 <li key={index}>- {description}</li>
               ))}
