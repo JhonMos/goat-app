@@ -1,12 +1,16 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import { BiShoppingBag } from "react-icons/bi";
 import { BiGridAlt } from "react-icons/bi";
 import logo from "../../images/logoGoat.png";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
+import { DataContext } from "../DataProvider";
 
 export const Header = () => {
   const [menu, setMenu] = useState(false);
+  const value = useContext(DataContext);
+  const [cart] = value.cart;
+
   const toggleMenu = () =>{
     setMenu(!menu)
   }
@@ -34,8 +38,11 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
-        <div>
-          <BiShoppingBag size="25px" />
+        <div className={styles.cartIcon}>
+          <span className={styles.quantityProducts}>{cart.length}</span>
+          <Link to="/cart">
+            <BiShoppingBag size="25px" />
+          </Link>
         </div>
       </header>
     </div>

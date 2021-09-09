@@ -5,7 +5,8 @@ import styles from "./Details.module.css";
 
 export const Details = () => {
   const { id } = useParams();
-  const [products] = useContext(DataContext);
+  const value = useContext(DataContext)
+  const [products] = value.products;
   const imgDiv = useRef();
 
 

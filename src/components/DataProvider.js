@@ -28,7 +28,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 3,
@@ -58,7 +58,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 4,
@@ -73,7 +73,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 5,
@@ -88,7 +88,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 6,
@@ -103,7 +103,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 7,
@@ -118,7 +118,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 8,
@@ -133,7 +133,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 9,
@@ -148,7 +148,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 10,
@@ -163,7 +163,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 11,
@@ -178,7 +178,7 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
     {
       id: 12,
@@ -193,12 +193,33 @@ export const DataProvider = (props) => {
         "Ajustador de gorra visera",
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
-      ]
+      ],
     },
   ]);
+
+  const [cart, setCart] = useState([]);
+
+  const addCart = (id) => {
+    const check = cart.every((item) => {
+      return item.id !== id;
+    });
+    if (check) {
+      const data = products.filter((product) => {
+        return product.id === id;
+      });
+      setCart([...cart, ...data]);
+    } else {
+      alert("the product has been added to cart");
+    }
+  };
+
+  const value = {
+    products: [products, setproducts],
+    cart: [cart, setCart],
+    addCart: addCart
+  };
+
   return (
-    <DataContext.Provider value={[products, setproducts]}>
-      {props.children}
-    </DataContext.Provider>
+    <DataContext.Provider value={value}>{props.children}</DataContext.Provider>
   );
 };

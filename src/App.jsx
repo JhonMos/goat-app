@@ -5,6 +5,8 @@ import { ProductsGrid } from "./components/ProductsGrid";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { DataProvider } from "./components/DataProvider";
 import { Details } from "./components/Details";
+import { Cart } from "./components/Cart";
+
 
 
 export const App = () => {
@@ -18,6 +20,9 @@ export const App = () => {
           </Route>
           <Route path="/about">
             Acerca de
+          </Route>
+          <Route path="/cart">
+            <Cart />
           </Route>
           <Route path="/products/:id">
             <Details />
