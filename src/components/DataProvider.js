@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import happyFaceNegra from "../images/happyFaceNegra.png";
 import sexyPeachNegra from "../images/sexyPeachNegra.png";
 import sourFlavorJuiceNegra from "../images/sourFlavorJuiceNegra.png";
@@ -212,6 +212,17 @@ export const DataProvider = (props) => {
       alert("the product has been added to cart");
     }
   };
+
+  useEffect(() => {
+    const dataCart = JSON.parse(localStorage.getItem('dataCart'))
+    if(dataCart){
+      setCart(dataCart)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('dataCart', JSON.stringify(cart))
+  }, [cart])
 
   const value = {
     products: [products, setproducts],

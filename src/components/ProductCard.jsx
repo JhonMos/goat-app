@@ -21,7 +21,10 @@ export const ProductCard = () => {
             <span className={styles.card__brand}>{product.brand}</span>
             <span className={styles.card__name}>{product.name}</span>
             <span className={styles.card__price}>COP. {product.price}</span>
-            <button className={styles.btnCart}>
+            <button
+              className={styles.btnCart}
+              onClick={() => addCart(product.id)}
+            >
               Agregar <BiShoppingBag size="20px" />
             </button>
           </div>

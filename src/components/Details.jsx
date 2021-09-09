@@ -1,23 +1,24 @@
 import React, { useContext, useRef } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { DataContext } from "./DataProvider.js";
 import styles from "./Details.module.css";
 
 export const Details = () => {
   const { id } = useParams();
-  const value = useContext(DataContext)
+  const value = useContext(DataContext);
   const [products] = value.products;
+  const addCart = value.addCart;
   const imgDiv = useRef();
-
 
   const details = products.filter((product) => product.id === parseInt(id));
 
-  const handleMouseMove = (e) =>{
-    const {left, top, width, height} = e.target.getBoundingClientRect();
-    const x = (e.pageX - left) / width * 100;
-    const y = (e.pageY - top) / height * 100;
-    imgDiv.current.style.backgroundPosition = `${x}% ${y}%`
-  }
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect();
+    const x = ((e.pageX - left) / width) * 100;
+    const y = ((e.pageY - top) / height) * 100;
+    imgDiv.current.style.backgroundPosition = `${x}% ${y}%`;
+  };
 
   return (
     <>
@@ -26,7 +27,9 @@ export const Details = () => {
           <div
             className={styles.imgContainer}
             onMouseMove={handleMouseMove}
-            onMouseLeave={() => imgDiv.current.style.backgroundPosition = `center`}
+            onMouseLeave={() =>
+              (imgDiv.current.style.backgroundPosition = `center`)
+            }
             ref={imgDiv}
             style={{ backgroundImage: `url(${product.image})` }}
           />
@@ -48,7 +51,14 @@ export const Details = () => {
               ))}
             </ul>
             <div className={styles.containerAddCart}>
-              <button className={styles.addCart}>Agregar al carrito</button>
+              <Link to="/cart">
+                <button
+                  className={styles.addCart}
+                  onClick={() => addCart(product.id)}
+                >
+                  Agregar al carrito
+                </button>
+              </Link>
             </div>
           </div>
         </div>
