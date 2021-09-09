@@ -10,5 +10,6 @@ export const Details = () => {
     (product, index) => product.id === parseInt(id)
   );
 
+  console.log(details)
   return <div>Details</div>;
 };
