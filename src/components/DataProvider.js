@@ -13,7 +13,6 @@ import cityComptonAzul from "../images/cityComptonAzul.png";
 import happyFaceAzul from "../images/happyFaceAzul.png";
 
 export const DataContext = createContext();
-
 export const DataProvider = (props) => {
   const [products, setproducts] = useState([
     {
@@ -23,7 +22,13 @@ export const DataProvider = (props) => {
       color: "Negra",
       image: happyFaceNegra,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 2,
@@ -32,7 +37,13 @@ export const DataProvider = (props) => {
       color: "Negra",
       image: sexyPeachNegra,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 3,
@@ -41,7 +52,13 @@ export const DataProvider = (props) => {
       color: "Negra",
       image: sourFlavorJuiceNegra,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 4,
@@ -50,7 +67,13 @@ export const DataProvider = (props) => {
       color: "Blanca",
       image: idiotLoveBlanca,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 5,
@@ -59,7 +82,13 @@ export const DataProvider = (props) => {
       color: "Blanca",
       image: moneyFirstBlanca,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 6,
@@ -68,7 +97,13 @@ export const DataProvider = (props) => {
       color: "Blanca",
       image: goatBrandBlanca,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 7,
@@ -77,7 +112,13 @@ export const DataProvider = (props) => {
       color: "Cafe",
       image: cactusJackMaskCafe,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 8,
@@ -86,7 +127,13 @@ export const DataProvider = (props) => {
       color: "Cafe",
       image: sourFlavorJuiceCafe,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 9,
@@ -95,7 +142,13 @@ export const DataProvider = (props) => {
       color: "Roja",
       image: rainOfVibesRoja,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 10,
@@ -104,7 +157,13 @@ export const DataProvider = (props) => {
       color: "Azul",
       image: tvNoSignalAzul,
       brand: "Goat",
-      category: "true",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 11,
@@ -113,7 +172,13 @@ export const DataProvider = (props) => {
       color: "Negra",
       image: cityComptonAzul,
       brand: "Goat",
-      category: "false",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
     {
       id: 12,
@@ -122,12 +187,18 @@ export const DataProvider = (props) => {
       color: "Azul",
       image: happyFaceAzul,
       brand: "Goat",
-      category: "false",
+      description: [
+        "Gorra Bordada",
+        "100% Algodón Lavado",
+        "Ajustador de gorra visera",
+        "Cierre de hebilla de metal",
+        "Pico Pre-Curvado",
+      ]
     },
   ]);
   return (
-      <DataContext.Provider value={[products, setproducts]}>
-          {props.children}
-      </DataContext.Provider>
+    <DataContext.Provider value={[products, setproducts]}>
+      {props.children}
+    </DataContext.Provider>
   );
 };

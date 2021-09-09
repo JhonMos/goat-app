@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useParams } from "react-router";
 import { DataContext } from "./DataProvider.js";
+import styles from "./Details.module.css";
 
 export const Details = () => {
   const { id } = useParams();
@@ -10,6 +11,30 @@ export const Details = () => {
     (product, index) => product.id === parseInt(id)
   );
 
-  console.log(details)
-  return <div>Details</div>;
+  return (
+    <>
+      {details.map((product) => (
+        <div className="details" key={product.id}>
+          <div
+            className={styles.imgContainer}
+            style={{ backgroundImage: `url(${product.image})` }}
+          />
+          <div className="boxDetails">
+            <p>{product.brand}</p>
+            <h2>{product.name}</h2>
+            <h3>COP {product.price}</h3>
+            <p>Información del producto</p>
+            <ul>
+              {
+                  product.description.map((description, index) =>(
+                      <li key={index}>- {description}</li>
+                  ))
+              }
+            </ul>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+      ))}
+    </>
+  );
 };
