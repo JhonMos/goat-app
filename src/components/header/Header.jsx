@@ -20,7 +20,7 @@ export const Header = () => {
         <div className={styles.toogle} onClick={toggleMenu}>
           <BiGridAlt size="25px" />
         </div>
-        <img className={styles.logo} src={logo} alt="" />
+        <Link to="/"><img className={styles.logo} src={logo} alt="" /></Link>
         <nav className={styles.menu} style={styleMenu}>
           <ul className={styles.menuList}>
             <li className={styles.menuItem}>

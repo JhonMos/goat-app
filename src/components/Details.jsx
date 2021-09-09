@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { useParams } from "react-router";
 import { DataContext } from "./DataProvider.js";
 import styles from "./Details.module.css";
@@ -6,8 +6,17 @@ import styles from "./Details.module.css";
 export const Details = () => {
   const { id } = useParams();
   const [products] = useContext(DataContext);
+  const imgDiv = useRef();
+
 
   const details = products.filter((product) => product.id === parseInt(id));
+
+  const handleMouseMove = (e) =>{
+    const {left, top, width, height} = e.target.getBoundingClientRect();
+    const x = (e.pageX - left) / width * 100;
+    const y = (e.pageY - top) / height * 100;
+    imgDiv.current.style.backgroundPosition = `${x}% ${y}%`
+  }
 
   return (
     <>
@@ -15,6 +24,9 @@ export const Details = () => {
         <div className={styles.details} key={product.id}>
           <div
             className={styles.imgContainer}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={() => imgDiv.current.style.backgroundPosition = `center`}
+            ref={imgDiv}
             style={{ backgroundImage: `url(${product.image})` }}
           />
           <div className={styles.boxDetails}>
