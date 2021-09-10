@@ -49,7 +49,7 @@ export const Cart = () => {
   if (cart.length === 0) {
     return <h2> Carrito vacio</h2>;
   }
-
+  
   return (
     <>
       {cart.map((product) => (
