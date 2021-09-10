@@ -29,6 +29,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 2,
@@ -44,6 +45,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 3,
@@ -59,6 +61,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 4,
@@ -74,6 +77,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 5,
@@ -89,6 +93,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 6,
@@ -104,6 +109,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 7,
@@ -119,6 +125,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 8,
@@ -134,6 +141,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 9,
@@ -149,6 +157,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 10,
@@ -164,6 +173,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 11,
@@ -179,6 +189,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
     {
       id: 12,
@@ -194,6 +205,7 @@ export const DataProvider = (props) => {
         "Cierre de hebilla de metal",
         "Pico Pre-Curvado",
       ],
+      count: 1
     },
   ]);
 
@@ -234,3 +246,4 @@ export const DataProvider = (props) => {
     <DataContext.Provider value={value}>{props.children}</DataContext.Provider>
   );
 };
+
