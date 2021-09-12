@@ -61,6 +61,10 @@ export const Cart = () => {
     let key = string.join(" - ");
     let url = key.replace(/\s+/g, "%20");
     window.open(`https://wa.me/573117840029?text=${url}`);
+
+    
+    cart.splice(0,cart.length);
+    setCart([...cart]);
   };
 
   return (
