@@ -40,7 +40,7 @@ export const Cart = () => {
   const removeProduct = (id) => {
     cart.forEach((item, index) => {
       if (item.id === id) {
-        cart.splice(index, 1)
+        cart.splice(index, 1);
       }
     });
     setCart([...cart]);
@@ -49,7 +49,20 @@ export const Cart = () => {
   if (cart.length === 0) {
     return <h2> Carrito vacio</h2>;
   }
-  
+
+  const whatsapp = () => {
+    let string = ["Hola GoatBrand. Mi pedido es: "];
+    cart.forEach((element) => {
+      const { name, count } = element;
+      string.push(
+        `Gorra: ${name} Cantidad: ${count}`
+      );
+    });
+    let key = string.join(" - ");
+    let url = key.replace(/\s+/g, "%20");
+    window.open(`https://wa.me/573117840029?text=${url}`);
+  };
+
   return (
     <>
       {cart.map((product) => (
@@ -91,7 +104,7 @@ export const Cart = () => {
         <span>$ {total} COP</span>
       </div>
       <div className={styles.containerBtnOrder}>
-        <button className={styles.btnOrder}>
+        <button className={styles.btnOrder} onClick={whatsapp}>
           Finalizar Pedido <FaWhatsapp fontSize="25px" />
         </button>
       </div>
