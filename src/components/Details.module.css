@@ -1,3 +1,8 @@
+.containerDetails{
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  align-items: center;
+}
 .details {
   width: 100%;
   justify-content: center;
@@ -60,6 +65,10 @@
   color: white;
   margin-top: 20px;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
 }
 
 @media (max-width: 860px) {
@@ -87,7 +96,7 @@
     max-width: 100%;
   }
   .addCart {
-    width: 100%;
+    max-width: 300px;
     font-size: 12px;
   }
   .imgContainer {

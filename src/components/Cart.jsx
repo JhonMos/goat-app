@@ -47,28 +47,26 @@ export const Cart = () => {
   };
 
   if (cart.length === 0) {
-    return <h2> Carrito vacio</h2>;
+    return <h2 className={styles.containerCart}> Carrito vacio</h2>;
   }
 
   const whatsapp = () => {
     let string = ["Hola GoatBrand. Mi pedido es: "];
     cart.forEach((element) => {
       const { name, count } = element;
-      string.push(
-        `Gorra: ${name} Cantidad: ${count}`
-      );
+      string.push(`Gorra: ${name} Cantidad: ${count}`);
     });
     let key = string.join(" - ");
     let url = key.replace(/\s+/g, "%20");
     window.open(`https://wa.me/573117840029?text=${url}`);
 
-    
-    cart.splice(0,cart.length);
+    cart.splice(0, cart.length);
     setCart([...cart]);
   };
 
   return (
-    <>
+    <section className={styles.containerCart}>
+      <h2 className={styles.titleCart}>Carrito de compras</h2>
       {cart.map((product) => (
         <div className={styles.details} key={product.id}>
           <div
@@ -96,7 +94,7 @@ export const Cart = () => {
           </div>
 
           <div
-            className={styles.containerAddCart}
+            className={styles.containerRemoveCart}
             onClick={() => removeProduct(product.id)}
           >
             <BiTrash color="tomato" size="25px" />
@@ -112,6 +110,6 @@ export const Cart = () => {
           Finalizar Pedido <FaWhatsapp fontSize="25px" />
         </button>
       </div>
-    </>
+    </section>
   );
 };

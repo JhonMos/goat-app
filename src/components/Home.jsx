@@ -1,9 +1,9 @@
 import React from "react";
 import { ProductCard } from "./ProductCard";
-import styles from "./ProductsGrid.module.css";
+import styles from "./Home.module.css";
 import capGoat from "../images/goatBrandBlanca.png";
 
-export const ProductsGrid = () => {
+export const Home = () => {
   return (
     <>
       <section className={styles.home__container}>
@@ -22,9 +22,11 @@ export const ProductsGrid = () => {
           <img className={styles.imgCapGoat} src={capGoat} alt="" />
         </div>
       </section>
-
-      <div className={styles.productsGrid}>
-        <ProductCard />
+      <div>
+        <h2 className={styles.sectionTitle}>Productos</h2>
+        <div className={styles.productsGrid}>
+          <ProductCard />
+        </div>
       </div>
     </>
   );

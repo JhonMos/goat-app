@@ -1,13 +1,13 @@
 import React from "react";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
-import { ProductsGrid } from "./components/ProductsGrid";
+import { Home } from "./components/Home";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { DataProvider } from "./components/DataProvider";
 import { Details } from "./components/Details";
 import { Cart } from "./components/Cart";
-
-
+import { Contact } from "./components/Contact";
+import { About } from "./components/About";
 
 export const App = () => {
   return (
@@ -16,10 +16,10 @@ export const App = () => {
         <Header />
         <Switch>
           <Route path="/contact">
-           Contacto
+           <Contact />
           </Route>
           <Route path="/about">
-            Acerca de
+            <About />
           </Route>
           <Route path="/cart">
             <Cart />
@@ -28,7 +28,7 @@ export const App = () => {
             <Details />
           </Route>
           <Route path="/">
-            <ProductsGrid />
+            <Home />
           </Route>
         </Switch>
         <Footer />
