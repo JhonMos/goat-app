@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/goat-app/static/css/main.14686e4f.chunk.css",
+    "main.js": "/goat-app/static/js/main.d1f34ce3.chunk.js",
+    "main.js.map": "/goat-app/static/js/main.d1f34ce3.chunk.js.map",
+    "runtime-main.js": "/goat-app/static/js/runtime-main.fe978393.js",
+    "runtime-main.js.map": "/goat-app/static/js/runtime-main.fe978393.js.map",
+    "static/js/2.4b0ab24c.chunk.js": "/goat-app/static/js/2.4b0ab24c.chunk.js",
+    "static/js/2.4b0ab24c.chunk.js.map": "/goat-app/static/js/2.4b0ab24c.chunk.js.map",
+    "index.html": "/goat-app/index.html",
+    "static/css/main.14686e4f.chunk.css.map": "/goat-app/static/css/main.14686e4f.chunk.css.map",
+    "static/js/2.4b0ab24c.chunk.js.LICENSE.txt": "/goat-app/static/js/2.4b0ab24c.chunk.js.LICENSE.txt",
+    "static/media/cactusJackMaskCafe.8ec5cc67.png": "/goat-app/static/media/cactusJackMaskCafe.8ec5cc67.png",
+    "static/media/cityComptonAzul.af8ace07.png": "/goat-app/static/media/cityComptonAzul.af8ace07.png",
+    "static/media/goatBrandBlanca.edc8d284.png": "/goat-app/static/media/goatBrandBlanca.edc8d284.png",
+    "static/media/happyFaceAzul.3606864c.png": "/goat-app/static/media/happyFaceAzul.3606864c.png",
+    "static/media/happyFaceNegra.59eeb48e.png": "/goat-app/static/media/happyFaceNegra.59eeb48e.png",
+    "static/media/idiotLoveBlanca.0dc6461f.png": "/goat-app/static/media/idiotLoveBlanca.0dc6461f.png",
+    "static/media/logoGoat.4da165f8.png": "/goat-app/static/media/logoGoat.4da165f8.png",
+    "static/media/moneyFirstBlanca.c949e649.png": "/goat-app/static/media/moneyFirstBlanca.c949e649.png",
+    "static/media/rainOfVibesRoja.f01feb37.png": "/goat-app/static/media/rainOfVibesRoja.f01feb37.png",
+    "static/media/sexyPeachNegra.abffb857.png": "/goat-app/static/media/sexyPeachNegra.abffb857.png",
+    "static/media/sourFlavorJuiceCafe.3efd31dc.png": "/goat-app/static/media/sourFlavorJuiceCafe.3efd31dc.png",
+    "static/media/sourFlavorJuiceNegra.3718c1a5.png": "/goat-app/static/media/sourFlavorJuiceNegra.3718c1a5.png",
+    "static/media/tvNoSignalAzul.62a841a4.png": "/goat-app/static/media/tvNoSignalAzul.62a841a4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fe978393.js",
+    "static/js/2.4b0ab24c.chunk.js",
+    "static/css/main.14686e4f.chunk.css",
+    "static/js/main.d1f34ce3.chunk.js"
+  ]
+}
